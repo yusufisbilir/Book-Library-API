@@ -55,3 +55,5 @@ const deleteAuthor = (req: Request, res: Response, next: NextFunction) => {
         .then((author) => (author ? res.status(201).json({ message: 'Author Deleted' }) : res.status(404).json({ message: 'Author not found' })))
         .catch((error) => res.status(500).json({ error }));
 };
+
+export default { createAuthor, readAuthor, readAllAuthor, updateAuthor, deleteAuthor };
