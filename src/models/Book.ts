@@ -12,7 +12,7 @@ const BookSchema = new Schema(
         title: { type: String, required: true },
         author: { type: Schema.Types.ObjectId, ref: 'Author', required: true }
     },
-    { timestamps: true, versionKey: true }
+    { timestamps: true }
 );
 
 export default mongoose.model<IBookModel>('Book', BookSchema);
